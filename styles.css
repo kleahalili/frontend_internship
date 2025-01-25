@@ -15,6 +15,163 @@ body {
     margin: 20px 0;
     text-align: center;
 }
+/* Header Styles */
+.header {
+  position: relative; /* Ensure the header is a positioned container for absolute elements */
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 3px solid #ff0080;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-top: 40px;
+  max-height: 50px;
+}
+
+.header-nav {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  padding: 10px 20px;
+  background-color: transparent; 
+  z-index: 1000; 
+}
+
+.header-nav .header-menu {
+  display: flex; /* Keeps the items aligned horizontally */
+  gap: 20px; /* Adds spacing between the menu items */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-menu li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+  font-size: 16px;
+}
+
+
+.header-right {
+  position: absolute; /* Allows it to be placed relative to the header */
+  top: 0;
+  right: 20px; /* Add some spacing from the right edge */
+  display: flex; /* Keep items aligned horizontally */
+  align-items: center;
+  gap: 15px; /* Spacing between elements */
+  padding: 10px 0; /* Optional padding for better alignment */
+}
+
+.header-user-options {
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Adds space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.header-user-options li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px;
+}
+
+
+.header-bottom {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #ffffff;
+}
+
+.header-submenu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-submenu li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Responsive Header */
+@media (max-width: 1024px) {
+  .header-top {
+    flex-wrap: wrap;
+  }
+
+  .header-nav .header-menu {
+    gap: 20px;
+  }
+
+  .header-right {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-search input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+  }
+
+  .header-submenu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .hero {
     height: 100vh;
